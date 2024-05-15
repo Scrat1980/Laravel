@@ -8,6 +8,9 @@ use App\Http\Controllers\API\ProductController;
 Route::controller(RegisterController::class)->group(function(){
     Route::post('register', 'register');
     Route::post('login', 'login');
+    Route::post('invite-company', 'inviteCompany');
+    Route::post('invite-user', 'inviteUser');
+    Route::post('activate', 'activate');
 });
 
 Route::middleware('auth:sanctum')->group( function () {
